@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>RAK Real Estate - Table of Contents</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+        }
+        .logo {
+            width: 250px;
+            margin: 30px auto 10px auto;
+            display: block;
+        }
+        h1 {
+            margin-top: 10px;
+            color: #b28a4b;
+        }
+
+        .links {
+            max-width: 700px;
+            width: 90%;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        .links a {
+            font-size: 20px;
+            color: #b28a4b;
+            text-decoration: none;
+            display: block;
+            margin: 15px 0;
+        }
+        .links a:hover {
+            text-decoration: underline;
+        }
+
+        /* 🔥 FLASHING NEW BADGE */
+        .new-badge {
+            background-color: red;
+            color: white;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 3px 6px;
+            border-radius: 5px;
+            margin-left: 10px;
+            display: inline-block;
+
+            animation: flash 1s infinite;
+        }
+
+        @keyframes flash {
+            0%   { opacity: 1; }
+            50%  { opacity: 0.2; }
+            100% { opacity: 1; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <img src="NEW LOGO - ORIGINAL.png" class="logo" alt="Company Logo">
+
+    <h1>Data Library</h1>
+
+    <div class="links">
+
+        <!-- ⭐ Page 1 NEW BADGE -->
+        <a href="page1.html">
+            Page 1 – 📋✍ Property Reassignment
+            <span class="new-badge">NEW</span>
+        </a>
+
+        <a href="page2.html">Page 2 – 👳🏻📋📌 Shaikh Kayed's Task</a>
+
+        <!-- ⭐ Page 3 NEW BADGE -->
+        <a href="page3.html">
+            Page 3 – 🧕📜 Shaikha Noorah shared with Shaikh Zayed
+            <span class="new-badge">NEW</span>
+        </a>
+
+    </div>
+
+
+    <!-- 🔥 AUTO-HIDE BADGE AFTER 15 DAYS -->
+    <script>
+        // Today's date
+        const today = new Date();
+
+        // Expiration date for NEW badge → March 1, 2025
+        const expireDate = new Date("2025-15-12");
+
+        // If today is after the expiration date → hide all badges
+        if (today >= expireDate) {
+            document.querySelectorAll(".new-badge").forEach(function(badge){
+                badge.style.display = "none";
+            });
+        }
+    </script>
+
+</body>
+</html>
